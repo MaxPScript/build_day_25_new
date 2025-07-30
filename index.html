@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Builder's Day Sports Challenge</title>
+		<link
+			rel="stylesheet"
+			href="./css/main.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./css/media.css"
+		/>
+	</head>
+	<body>
+		<!-- Main Grid Container -->
+		<div class="grid-container">
+			<!-- Header / Hero Section -->
+			<header class="hero">
+				<div class="hero_banner">
+					<h1>
+						День строителя в Сычёво
+						<br />
+						9 августа 2025
+						<br />
+						Юбилей 70 лет!
+					</h1>
+					<!-- <p></p> -->
+				</div>
+				<div class="hero_content">
+					<h2 class="test_h2">Развивайте свою силу!</h2>
+					<p>
+						Отпразднуйте День строителя захватывающими спортивными баталиями!
+					</p>
+				</div>
+				<!-- <div class="cta-button">
+					<span> Принять участие </span>
+					<span class="icon_whatsapp">
+						<img
+							width="32"
+							height="32"
+							src="./assets/icons/whatsapp.svg"
+							alt=""
+						/>
+					</span>
+					<span>+7(926)604-66-41</span>
+					<span> (только сообщения) </span>
+				</div> -->
+			</header>
+			<marquee style="background: blanchedalmond"
+				>При поддержке администрации Волоколамского района</marquee
+			>
+			<!-- Events Section -->
+			<section class="events">
+				<h2>Спортивные события</h2>
+				<p>
+					Сбор участников в 9.30 возле школы <br />
+					(Школьный пр-д, 2)
+				</p>
+				<div class="event-grid">
+					<div class="event-card bg_1">
+						<span class="icon icon_beach"></span>
+						<div class="event_card_text">
+							<div class="noisy_bg"></div>
+							<div class="content">
+								<h3>Пляжный&nbsp;волейбол</h3>
+								<p>Солнце, песок и гвозди!</p>
+							</div>
+						</div>
+					</div>
+					<div class="event-card bg_2">
+						<span class="icon icon_soccer"></span>
+						<div class="event_card_text">
+							<div class="noisy_bg"></div>
+							<div class="content">
+								<h3>Футбол</h3>
+								<p>Попади в "девятку"!</p>
+							</div>
+						</div>
+					</div>
+					<div class="event-card bg_3">
+						<span class="icon icon_basket"></span>
+						<div class="event_card_text">
+							<div class="noisy_bg"></div>
+							<div class="content">
+								<h3>Баскетбол</h3>
+								<p>Забей сверху!</p>
+							</div>
+						</div>
+					</div>
+					<div class="event-card bg_4">
+						<span class="icon icon_tennis"></span>
+						<div class="event_card_text">
+							<div class="noisy_bg"></div>
+							<div class="content">
+								<h3>Настольный&nbsp;теннис</h3>
+								<p>Подумай - ударь!</p>
+							</div>
+						</div>
+					</div>
+					<div class="event-card bg_5">
+						<span class="icon icon_rollers"></span>
+						<div class="event_card_text">
+							<div class="noisy_bg"></div>
+							<div class="content">
+								<h3>Лыжероллеры</h3>
+								<p>Не думай - гони!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Countdown Timer -->
+			<section class="countdown">
+				<h2>До начала</h2>
+				<!-- <div class="timer">
+					<span id="days">03</span>d <span id="hours">12</span>h
+					<span id="minutes">45</span>m
+				</div> -->
+				<div class="timer">
+					<div class="timer-block">
+						<span id="days">00</span>
+						<small>Days</small>
+					</div>
+					<div class="timer-block">
+						<span id="hours">00</span>
+						<small>Hours</small>
+					</div>
+					<div class="timer-block">
+						<span id="minutes">00</span>
+						<small>Minutes</small>
+					</div>
+					<div class="timer-block">
+						<span id="seconds">00</span>
+						<small>Seconds</small>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer class="footer">
+				<p class="copyright">
+					2025 © WebDev<a href="#">
+						<img
+							src="./assets/icons/whatsapp.svg"
+							alt="whatsapp icon"
+						/>
+					</a>
+					<span>+7(926)604-66-41</span>
+				</p>
+			</footer>
+			<div class="memory">
+				<p>Помним...</p>
+				<p>
+					Аверьянов Борис, Виноградов Михаил, Сульдин Виктор, Леонов Игорь,
+					Катаев Николай, Афонченко Дмитрий.
+				</p>
+			</div>
+		</div>
+		<!-- style="display: none" -->
+		<div class="svg_utils">
+			<svg
+				width="0"
+				height="0"
+			>
+				<defs>
+					<clipPath
+						id="myClipPath"
+						clipPathUnits="objectBoundingBox"
+					>
+						<!-- Triangle pointing right -->
+						<path
+							d="M0.25 0.5 L0.25 0.25 A0.25 0.25 1 0 0 0.25 0 L1 0 L1 1 L0 1 L0 0.5 Z"
+						/>
+					</clipPath>
+				</defs>
+			</svg>
+			<svg
+				width="0"
+				height="0"
+			>
+				<filter
+					id="noise"
+					x="-10%"
+					y="-10%"
+					width="120%"
+					height="120%"
+				>
+					<feTurbulence
+						baseFrequency="0.01 0.4"
+						result="NOISE"
+						numOctaves="3"
+					/>
+					<feDisplacementMap
+						in="SourceGraphic"
+						in2="NOISE"
+						scale="40"
+						xChannelSelector="R"
+						yChannelSelector="R"
+					></feDisplacementMap>
+				</filter>
+
+				<!-- <image xlink:href="..." x="0" y="0" width="100%" height="100%" filter="url(#noise)"></image> -->
+			</svg>
+		</div>
+		<!-- <span id="font-size-debug"></span>
+		<script>
+			document.getElementById("font-size-debug").textContent = getComputedStyle(
+				document.documentElement
+			).fontSize;
+			window.addEventListener("resize", () => {
+				document.getElementById("font-size-debug").textContent =
+					getComputedStyle(document.documentElement).fontSize;
+			});
+		</script> -->
+	</body>
+	<script
+		type="module"
+		src="./js/app.js"
+	></script>
+	<!-- <script src="./js/components/clamp_font_size.js"></script> -->
+</html>
