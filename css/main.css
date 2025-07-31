@@ -413,12 +413,13 @@ body {
 .scroll_animation {
 	animation: fadeUp both;
 	animation-timeline: view();
-	animation-range: entry -10% cover 60%;
+	/* animation-timeline: scroll(); */
+	animation-range: entry 30% cover 60%;
 }
 @keyframes fadeUp {
 	0% {
 		opacity: 0;
-		transform: translateY(-50%) scale(0.5);
+		transform: translateY(-50%) scale(0.3);
 	}
 	100% {
 		opacity: 1;
