@@ -414,8 +414,8 @@ body {
 	animation: fadeUp both;
 	animation-timeline: view();
 	/* animation-timeline: scroll(); */
-	animation-range: contain 10% cover 60%;
-	animation-range: contain 10% exit 20%;
+	/* animation-range: contain 10% cover 60%; */
+	animation-range: contain contain 50%;
 }
 @keyframes fadeUp {
 	0% {
