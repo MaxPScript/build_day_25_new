@@ -102,11 +102,13 @@ body {
 		line-height: normal;
 	}
 	span {
-		width: 32px;
-		position: absolute;
-		top: 8px;
-		left: 8px;
 	}
+}
+.info_icon {
+	width: 32px;
+	position: absolute;
+	top: 8px;
+	left: 8px;
 }
 .edict:hover {
 	grid-template-rows: 1fr;
@@ -128,6 +130,9 @@ body {
 			line-height: 1.4;
 			text-align: left;
 		}
+	}
+	span {
+		display: inline-block;
 	}
 }
 
