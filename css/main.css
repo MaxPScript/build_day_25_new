@@ -60,6 +60,7 @@ body {
 	background-size: cover;
 	/* mix-blend-mode: darken; */
 	background-blend-mode: soft-light;
+	background-position: center;
 	.bg_white {
 		/* background-color: white; */
 	}
