@@ -18,6 +18,50 @@
 	</head>
 	<body>
 		<!-- Main Grid Container -->
+		<div class="edict">
+			<!-- <input
+				type="checkbox"
+				id="expand-toggle"
+			/>
+			<label for="expand-toggle">▼ Показать полный текст ▼</label> -->
+			<!-- <img
+				src="./assets/img/edict_full_size.jpg"
+				alt="edict"
+			/> -->
+			<span
+				><img
+					src="./assets/icons/info.svg"
+					alt="info icon"
+			/></span>
+			<div class="text">
+				<p><b>ПРЕЗИДИУМ ВЕРХОВНОГО СОВЕТА СССР</b></p>
+				<br />
+				<p class="razr"><b>УКАЗ</b></p>
+				<br />
+				<p><b>от 6 сентября 1955 года </b></p>
+				<br />
+				<p>
+					<b>Об установлении ежегодного праздника «Дня строителя»</b>
+				</p>
+				<div
+					class="prp-pages-output"
+					lang="ru"
+				>
+					<p>
+						Президиум Верховного Совета СССР
+						<span class="razr">постановляет:</span>
+					</p>
+					<p>Установить праздник «День строителя».</p>
+					<p>
+						«День строителя» праздновать ежегодно во второе воскресенье августа
+						месяца.
+					</p>
+					<p>
+						<small>«Ведомости Верховного Совета СССР» 1955г. № 16</small>
+					</p>
+				</div>
+			</div>
+		</div>
 		<div class="grid-container">
 			<!-- Header / Hero Section -->
 			<header class="hero">
@@ -314,6 +358,131 @@
 				</filter>
 
 				<!-- <image xlink:href="..." x="0" y="0" width="100%" height="100%" filter="url(#noise)"></image> -->
+			</svg>
+			<svg
+				width="600"
+				height="200"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<defs>
+					<!-- Sepia filter -->
+					<filter id="sepia">
+						<feColorMatrix
+							type="matrix"
+							values="
+        0.393 0.769 0.189 0 0,
+        0.349 0.686 0.168 0 0,
+        0.272 0.534 0.131 0 0,
+        0     0     0     1 0"
+						/>
+					</filter>
+
+					<!-- Noise effect -->
+					<filter
+						id="noise"
+						x="0"
+						y="0"
+						width="100%"
+						height="100%"
+					>
+						<feTurbulence
+							type="fractalNoise"
+							baseFrequency="0.8"
+							numOctaves="4"
+							result="turbulence"
+						/>
+						<feDiffuseLighting
+							in="turbulence"
+							lighting-color="white"
+							surfaceScale="1"
+						>
+							<feDistantLight
+								azimuth="45"
+								elevation="55"
+							/>
+						</feDiffuseLighting>
+					</filter>
+
+					<!-- Vignette effect -->
+					<filter
+						id="vignette"
+						x="0"
+						y="0"
+						width="100%"
+						height="100%"
+					>
+						<feDropShadow
+							dx="0"
+							dy="0"
+							stdDeviation="50"
+							flood-color="black"
+							flood-opacity="0.3"
+						/>
+					</filter>
+				</defs>
+
+				<!-- Apply multiple filters with feComposite -->
+				<!-- <text
+					x="50"
+					y="150"
+					font-family="Georgia"
+					font-size="48"
+					fill="#000"
+					filter="url(#sepia)"
+				>
+					Old Text Effect
+				</text> -->
+			</svg>
+			<svg
+				width="0"
+				height="0"
+				style="position: absolute"
+			>
+				<filter
+					id="oldPaper"
+					x="0"
+					y="0"
+					width="100%"
+					height="100%"
+				>
+					<!-- Step 1: Create a noise texture (subtle grain) -->
+					<feTurbulence
+						type="fractalNoise"
+						baseFrequency="0.02"
+						numOctaves="3"
+						result="noise"
+					/>
+
+					<!-- Step 2: Lighten the noise to avoid overpowering text -->
+					<feColorMatrix
+						type="matrix"
+						values="1 0 0 0 0
+                                         0 1 0 0 0
+                                         0 0 1 0 0
+                                         0 0 0 0.3 0"
+						in="noise"
+						result="lightNoise"
+					/>
+
+					<!-- Step 3: Merge noise with the original text (preserve text color) -->
+					<feBlend
+						mode="multiply"
+						in="SourceGraphic"
+						in2="lightNoise"
+						result="texturedText"
+					/>
+
+					<!-- Step 4: Add a sepia/yellow tint (optional) -->
+					<feColorMatrix
+						type="matrix"
+						values="0.4 0   0   0   0
+              0.3 0.5 0   0   0
+              0.2 0   0.3 0   0
+              0   0   0   1   0"
+						in="texturedText"
+						result="agedText"
+					/>
+				</filter>
 			</svg>
 		</div>
 		<!-- <span id="font-size-debug"></span>

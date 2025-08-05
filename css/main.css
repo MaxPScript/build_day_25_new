@@ -40,6 +40,7 @@ body {
 
 /* Main Grid Layout */
 .grid-container {
+	transition: opacity 1s;
 	display: grid;
 	/* grid-template-columns: 1fr; */
 	/* grid-template-rows: auto; */
@@ -49,9 +50,103 @@ body {
 	margin: 0 auto;
 	/* padding: 1rem; */
 }
+.edict {
+	margin: 0;
+	font-family: Cambria, "Times New Roman", serif;
+	background: url(../assets/img/new_1.jpg),
+		url(../assets/img/parchment-435347_640.jpg),
+		radial-gradient(white 30%, transparent);
+	background-size: cover;
+	/* mix-blend-mode: darken; */
+	background-blend-mode: soft-light;
+	.bg_white {
+		/* background-color: white; */
+	}
+	img {
+		width: 100%;
+		display: block;
+		mix-blend-mode: darken;
+	}
+	.text {
+		/* filter: url(#oldPaper); */
+		.razr {
+			letter-spacing: 0.14em;
+			margin-left: 0.3em;
+		}
+		p {
+			/* text-indent: 1.6em;
+				line-height: 1.25;
+				margin: 0.5em 0 0.5em 0; */
+		}
+	}
+}
+.edict::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	/* background-color: hsl(0 50% 100% / 0.1); */
+}
+.edict {
+	width: 100vw;
+	/* border: 1px dashed gold; */
+	/* margin-block-start: 1em; */
+	display: grid;
+	position: fixed;
+	z-index: 1;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 0.5s;
+	/* padding: 1rem; */
+	p,
+	small {
+		text-align: center;
+		line-height: normal;
+	}
+	span {
+		width: 32px;
+		position: absolute;
+		top: 8px;
+		left: 8px;
+	}
+}
+.edict:hover {
+	grid-template-rows: 1fr;
+	padding-block: 2em 5em;
+}
+.edict:hover + .grid-container {
+	opacity: 0.2;
+}
+.edict .text {
+	overflow: hidden;
+	/* max-height: 6em;
+						overflow: hidden;
+						transition: max-height 0.5s ease; */
+	.prp-pages-output {
+		/* margin-inline-start: 2em; */
+		margin-inline-start: max(2em, calc(1em + 5vw));
+		margin-block-start: 4em;
+		p {
+			line-height: 1.4;
+			text-align: left;
+		}
+	}
+}
 
+.edict input[type="checkbox"] {
+	/* display: none; */
+}
+.edict input[type="checkbox"]:checked ~ .text {
+	/* max-height: 1000px; */
+}
+.edict label {
+	/* display: block;
+						text-align: center;
+						cursor: pointer;
+						padding: 5px;
+						background: #ddd; */
+}
 /* Hero Section */
 .hero {
+	margin-block-start: 32px;
 	aspect-ratio: 1280/785;
 	/* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url("https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"); */
