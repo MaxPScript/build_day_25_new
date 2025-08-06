@@ -115,6 +115,7 @@ body {
 .edict:hover {
 	grid-template-rows: 1fr;
 	padding-block: 2em 5em;
+	box-shadow: 0px 2px 12px hsl(35 70% 50% / 0.7);
 }
 .edict:hover + .grid-container {
 	opacity: 0.2;
