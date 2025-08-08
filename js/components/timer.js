@@ -32,7 +32,7 @@ function startCountdown(targetDateString) {
 		if (distance < 0) {
 			clearInterval(timerInterval);
 			document.querySelector(".timer").innerHTML =
-				"<span>Event started! 🎉</span>";
+				"<span>С Днём строителя! 🎉</span>";
 		}
 	}
 
