@@ -704,3 +704,23 @@ select {
 	height: 4px;
 	background: linear-gradient(90deg, red 0%, green 100%);
 }
+.gallery_results {
+	position: absolute;
+	width: 100%;
+	ul {
+		display: flex;
+		width: 80%;
+		margin: auto;
+		justify-content: space-between;
+		a {
+			text-decoration: none;
+			color: #ffff80;
+
+			background: hsl(200, 50%, 48%);
+			align-self: center;
+			border-radius: 0.3rem;
+			padding: 0.5rem 1.8rem;
+			box-shadow: 1px 1px 2px hsl(200 50% 0% / 0.4);
+		}
+	}
+}
